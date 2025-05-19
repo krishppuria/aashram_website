@@ -634,14 +634,14 @@ h6 {
 .footer .copyright {
   padding-top: 20px;
   padding-bottom: 20px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  background: #000;
-  color: #fff;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 60%);
+  background: transparent;
+  color: #000;
 }
 
 .footer .copyright p {
   margin-bottom: 0;
-  color: #fff;
+  color: #000;
 }
 
 .footer .credits {
@@ -860,6 +860,10 @@ section,
 .section-title h2 .description-title {
   color: #8E4400;
 }
+
+.color_gray{
+  color: #8E4400;
+}
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -872,10 +876,12 @@ section,
   /* align-items: center; */
   /* background: url("../img/hero-bg.jpg") top left; */
   /* background-size: cover; */
-  padding: 0;
+  padding: 0 !important;
 }
 
-
+.visotope-container{
+  height: auto !important;
+}
 
 .sub_hero {
   width: 100%;
@@ -1078,7 +1084,14 @@ section,
   background-repeat: no-repeat;
   background-position: bottom left;
 }
-
+section.about.section.featured-services {
+  background: #fff;
+}
+section.about.section.featured-services a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .featured-services .service-item {
   padding: 20px;
@@ -1097,6 +1110,10 @@ section,
 .featured-services .service-item:hover{
   border-color: #671900;
 }
+
+
+
+
 /* .featured-services .service-item:before {
   content: "";
   position: absolute;
@@ -1176,9 +1193,7 @@ section,
   margin-bottom: 35px;
 }
 
-.about .about-content ul li:first-child {
-  /* margin-top: 35px; */
-}
+ 
 
 .about .about-content ul i {
   background: var(--surface-color);
@@ -1205,10 +1220,7 @@ section,
   font-size: 15px;
   margin-bottom: 1px;
 }
-
-.about .about-content p:last-child {
-  /* margin-bottom: 0; */
-}
+ 
 
 /*--------------------------------------------------------------
 # Skills Section
@@ -1539,10 +1551,12 @@ a.glightbox.preview-link {
 }
 
 .portfolio .portfolio-item {
-  position: relative;
+  position: relative ;
   overflow: hidden;
 }
-
+.isotope-container{
+  height: auto !important;
+}
 .portfolio .portfolio-item .portfolio-info {
   opacity: 0;
   position: absolute;
@@ -1882,10 +1896,7 @@ a.glightbox.preview-link {
     padding: 20px;
   }
 }
-
-.contact .info-item {
-  /* margin-bottom: 40px; */
-}
+ 
 
 .contact .info-item i {
   font-size: 20px;
@@ -2100,6 +2111,32 @@ a.glightbox.preview-link {
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
+ 
+.card-custom {
+  background-color: #f5f5f5;
+  border: 0;
+}
+.card-custom .card-body {
+  padding: 50px;
+}
+
+
+
+
+@media (max-width:767px){
+
+  section, .section { 
+    padding: 40px 0; 
+}
+  section#about .img-fluid {
+    margin-bottom: 21px;
+  }
+  .about .about-content ul li { 
+    margin: 10px 0;
+  }
+
+  section#about {
+    padding-bottom: 0;
+}
+
 }
